@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful Calculator</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: white; 
+    
+    }
+
+    #calculator {
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      background-color:#FFF0F5;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+      text-align: right;
+      background-image: linear-gradient(to bottom right,#EEBD89,#FF6EC7);
+
+    }
+
+    #display {
+      font-size: 35px;
+      color: #0c0c0c;
+      margin-bottom: 10px;
+      padding: 15px;
+      border: 2px solid #1e1515;
+      border-radius: 4px;
+      background-color:#CEA2FD;
+      display: block;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .button {
+      flex: 1;
+      margin: 5px;
+      padding: 15px;
+      font-size: 28px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #555;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+      border-radius: 40%;
+    }
+
+    .button.operator {
+      background-color:#C8A4D4;
+      color: #74006F;
+    }
+
+    .button.equal {
+      background-color: purple;
+      color: #fff;
+    }
+
+    .button.double {
+      flex-basis: 2;
+    }
+
+    .button:hover {
+      background-color: #8968CD;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="calculator">
+    <div id="display">0</div>
+    
+    <div class="row">
+      <div class="button" onclick="appendToDisplay('7')">7</div>
+      <div class="button" onclick="appendToDisplay('8')">8</div>
+      <div class="button" onclick="appendToDisplay('9')">9</div>
+      <div class="button operator" onclick="appendToDisplay('/')">/</div>
+    </div>
+    
+    <div class="row">
+      <div class="button" onclick="appendToDisplay('4')">4</div>
+      <div class="button" onclick="appendToDisplay('5')">5</div>
+      <div class="button" onclick="appendToDisplay('6')">6</div>
+      <div class="button operator" onclick="appendToDisplay('*')">*</div>
+    </div>
+    
+    <div class="row">
+      <div class="button" onclick="appendToDisplay('1')">1</div>
+      <div class="button" onclick="appendToDisplay('2')">2</div>
+      <div class="button" onclick="appendToDisplay('3')">3</div>
+      <div class="button operator" onclick="appendToDisplay('-')">-</div>
+    </div>
+    
+    <div class="row">
+      <div class="button double" onclick="appendToDisplay('0')">0</div>
+      <div class="button" onclick="appendToDisplay('.')">.</div>
+      <div class="button equal" onclick="calculate()">=</div>
+      <div class="button operator" onclick="appendToDisplay('+')">+</div>
+    </div>
+    
+    <div class="row">
+      <div class="button double" onclick="clearDisplay()">C</div>
+    </div>
+  </div>
+
+</body>
+</html>
+   
