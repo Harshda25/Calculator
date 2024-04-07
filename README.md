@@ -4,7 +4,7 @@
 
   ![image](./img/Screenshot.png)
 
-  ## How to atrribute
+  ## How to atribute
 
   We welcome contribution from the community to help us expand and improve this project
   If you would like to contribute,follow these steps:
